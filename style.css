@@ -1,0 +1,78 @@
+html {
+    background-image: url("https://png.pngtree.com/background/20210711/original/pngtree-creative-financial-currency-background-synthesis-picture-image_1121678.jpg");
+    background-repeat: no-repeat;
+    
+}
+
+h1 {
+    margin-top: 40px;
+    font-size: 4em;
+    text-align:center;
+    color: rgba(0, 128, 0, 0.737);
+}
+
+h3{
+    text-align:center;
+    font-size: 22px;
+
+}
+
+.flexbox-container {
+   display: flex;
+   justify-content: center;
+}
+
+.flexbox-item{
+    width: 200px;
+    background-color: none;
+}
+
+.flexbox-item-1 {
+    min-height: 100px;
+    margin-right: 30px;
+    text-align: center;
+}
+
+.flexbox-item-2 {
+    min-height: 100px;
+    text-align: center;
+}
+
+.flexbox-item-3 {
+    min-height: 100px;
+    text-align: center;
+}
+
+.flexbox-item-4 {
+    min-height: 100px;
+    min-width: 200px;
+    text-align: center;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.button {
+    width: 100px;
+    height: 25px;
+    color: green;
+}
+
+.flexbox-item-5 {
+    min-height: 100px;
+    min-width: 200px;
+    text-align: center;
+    margin-top: 20px;
+    margin-right: 50px;
+}
+
+
+.footer-text{
+    text-align: center;
+    margin-top: 370px;
+}
+
+h4 {
+    font-size: 12px;
+    text-align: center;
+    color: black;
+}
