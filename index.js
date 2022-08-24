@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function(){
         .then(currencyArray =>{  
             appendFromSelect(currencyArray)
             appendToSelect(currencyArray)
+            handleSubmit()
         })
 
         const fromSelect = document.querySelector("#fromSelect")
@@ -32,6 +33,21 @@ document.addEventListener("DOMContentLoaded", function(){
             return option
         }
 
-        
+        function handleSubmit() {
+            const form = document.querySelector("#form")
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                const amount = e.target[0].value
+                const from = e.target[1].value
+                const to = e.target[2].value
+
+                fetch(`https://api.frankfurter.app/latest?amount=${amount}&from=${from}&to=${to}`)
+                .then(resp => resp.json())
+                .then(data => {
+                    console.log(data)
+                })
+            })
+        }
 
 })
