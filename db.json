@@ -1,0 +1,12 @@
+{
+    "currencies": [
+        {
+            "id": 1,
+            "currency": "USD"
+        },
+        {
+            "id": 2,
+            "currency": "GBP"
+        }
+    ]
+}

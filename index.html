@@ -1,28 +1,37 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="./index.js"></script>
     </head>
     <body>
         <h1>Currency Convertor</h1>
-        <div class="flexbox-container">
-            <div id="amount" class=" flexbox-item-2 flexbox-item-1">
-                <h3>Amount</h3>
-                <input type="number">
-            </div>
-            <div id="from" class=" flexbox-item flexbox-item-2">
-                <h3>From</h3>
-                <input type="placeholder">
-            </div>
-            <div id="to" class=" flexbox-item flexbox-item-3">
-                <h3>To</h3>
-                <input type="placeholder">
-            </div>
-        </div>
-        <div class="flexbox-container">
-            <div class=" flexbox-item-2 flexbox-item-4">
-                <button class="button" onclick="myFunction()"><strong>Convert</strong></button>
-            </div>
-            <div class=" flexbox-item-2 flexbox-item-5">
+        <form>
+
+                <div class="flexbox-container">
+                    <div id="container" class=" flexbox-item-2 flexbox-item-1">
+                        <h3>Amount</h3>
+                        <input type="number" id="amount">
+                    </div>
+                    <div id="fromDiv" class=" flexbox-item flexbox-item-2">
+                        <h3>From</h3>
+                        <select id="fromSelect" name="from">
+                            <!-- option elements go here -->
+                        </select>
+                    </div>
+                    <div id="toDiv" class=" flexbox-item flexbox-item-3">
+                        <h3>To</h3>
+                        <select id="toSelect" name="to">
+                            <!-- option elements go here -->
+                        </select>
+                    </div>
+                </div>
+                <div class="flexbox-container">
+                    <div class=" flexbox-item-2 flexbox-item-4">
+                        <input type="submit" class="button" placeholder="Convert"/>
+                    </div>
+                </div>
+            </form>
+                <div class=" flexbox-item-2 flexbox-item-5">
                 <input type="text">
 
             </div>
