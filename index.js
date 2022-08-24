@@ -1,11 +1,14 @@
 document.addEventListener("DOMContentLoaded", function(){
 
-    fetch("http://localhost:3000/currencies")
+    const url = "https://api.frankfurter.app"
+    fetch(`${url}/currencies`)
         .then(resp => resp.json())
-        .then(currencyArray =>{  
-            appendFromSelect(currencyArray)
-            appendToSelect(currencyArray)
+        .then(data => {
+            console.log(Object.keys(data))
+            appendFromSelect(Object.keys(data))
+            appendToSelect(Object.keys(data))
             handleSubmit()
+
         })
 
         const fromSelect = document.querySelector("#fromSelect")
@@ -28,8 +31,8 @@ document.addEventListener("DOMContentLoaded", function(){
         
         function makeOption(currency) {
             const option = document.createElement("option")
-            option.innerText = currency.currency
-            option.value = currency.currency
+            option.innerText = currency
+            option.value = currency
             return option
         }
 
@@ -42,10 +45,14 @@ document.addEventListener("DOMContentLoaded", function(){
                 const from = e.target[1].value
                 const to = e.target[2].value
 
-                fetch(`https://api.frankfurter.app/latest?amount=${amount}&from=${from}&to=${to}`)
+                fetch(`${url}/latest?amount=${amount}&from=${from}&to=${to}`)
                 .then(resp => resp.json())
                 .then(data => {
-                    console.log(data)
+                    const amount = Object.values(data.rates)[0]
+                    const type = Object.keys(data.rates)[0]
+                
+                    const conversion = document.querySelector("#conversion")
+                    conversion.innerText = `${amount} ${type}`
                 })
             })
         }
