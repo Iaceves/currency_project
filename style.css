@@ -1,6 +1,9 @@
 body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://tinyurl.com/4kybwnvx");
 }
+h1 {
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white;
    
 
 h1 {
